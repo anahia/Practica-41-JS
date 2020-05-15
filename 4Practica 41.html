@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<!--esta es mi practica 41-->
+
+<head>
+    <title>Practica 41</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        //class Persona ***
+        function People() {
+            this.nombre = prompt('Ingrese su nombre:', '');
+            this.edad = parseInt(prompt('Ingrese su edad:', ''));
+        }
+        //class Company ***
+        function Company() {
+            this.edadLimit = 60;
+            this.noIngreso = noIngreso;
+        }
+        //class Limit Access ***
+        function noIngreso(person) {
+            if (person.edad >= this.edadLimit) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        var person1 = new People();
+        var person2 = new People();
+        var person3 = new People();
+        var company = new Company();
+        var no = 0;
+        if (company.noIngreso(person1)) {
+            no++;
+        }
+
+        if (company.noIngreso(person2)) {
+            no++;
+        }
+
+        if (company.noIngreso(person3)) {
+            no++;
+        }
+
+        document.write('No pueden ingresar debido a su edad.');
+        document.write('<br>');
+        document.write(no);
+    </script>
+</body>
+
+</html>
